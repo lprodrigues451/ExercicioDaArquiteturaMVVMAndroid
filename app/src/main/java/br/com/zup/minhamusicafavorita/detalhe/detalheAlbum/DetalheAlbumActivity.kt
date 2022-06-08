@@ -3,6 +3,7 @@ package br.com.zup.minhamusicafavorita.detalhe.detalheAlbum
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import br.com.zup.minhamusicafavorita.ALBUM_KEY
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalheAlbumBinding
@@ -16,11 +17,25 @@ class DetalheAlbumActivity : AppCompatActivity() {
         binding = ActivityDetalheAlbumBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(R.string.detalhe_name)
+        clickNoBotao()
+        configuracaoDoBar()
         recuperarAlbum()
+        clickNoBotao()
+
+
 
     }
+    private fun clickNoBotao(){
+        binding.favoritar.setOnClickListener {
+            Toast.makeText(applicationContext, "Álbum favoritado com sucessso!", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun configuracaoDoBar(){
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(R.string.detalhe_name)
+    }
+    
     private fun recuperarAlbum(){
         val album = intent.getParcelableExtra<InformacaoAlbum>(ALBUM_KEY)
 
