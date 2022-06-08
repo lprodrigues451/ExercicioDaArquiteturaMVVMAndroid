@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula36/Exercicio3/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula43Exercicio/Exercicio1/app/src/main/res/layout/activity_detalhes_da_banda.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula43Exercicio/Exercicio1/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula43Exercicio/Exercicio1/app/src/main/res/layout/fragment_fotos.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula43Exercicio/Exercicio1/app/src/main/res/layout/fragment_informacao.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula44/app/src/main/res/layout/activity_detalhe_album.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula44/app/src/main/res/layout/activity_detalhes_da_banda.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula44/app/src/main/res/layout/activity_main.xml" value="0.27635327635327633" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula44/app/src/main/res/layout/fragment_fotos.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/luiz.rodrigues/Desktop/ProjetosAndroid/Aula44/app/src/main/res/layout/minha_musica_item.xml" value="0.17552083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

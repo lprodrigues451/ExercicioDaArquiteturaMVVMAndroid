@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Minha Musica Favorita</string>
+    <string name="descricao_da_imagem">Na foto tem duas milheres e dois homens e com letras grandes escrito Banda Djavú</string>
+    <string name="nome_musica">Meteoro</string>
+    <string name="Parte_letra">\n
+         E foi assim que começou nossa história de amor \n
+        Na batida desse som que você me conquistou \n
+        Envolvendo e enlouquecendo, eu nem pude perceber \n
+        Meteoro de mansinho fez meu corpo estremecer
+            \n\
+        Eu acho que vou me apaixonar \n
+        Meteoro de mansinho que chegou para ficar \n
+        Me chama que vou me apaixonar \n
+        Meteoro que fascina e faz a gente delirar
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="informaçao_banda_djavu">
+        A Banda Djavú foi criada em 2008 na cidade de Capim Grosso,
+        na Bahia pelos vocalistas, Nádila, Geandson Rios e DJ Juninho Portugal.
+        O nome da banda foi inspirado em um filme e vem da expressão francesa déjà vu,
+        que traduzindo quer dizer já visto.
+        Em 2009, lançaram, Seu primeiro CD Intitulado como O Furacão é Show.
+        E logo em seguida Lançaram seu Primeiro DVD, o qual foi vendido nos quatros cantos do Brasil.</string>
+    <string name="Detalhe_bar">Detalhes da banda</string>
+    <string name="titulo_Djavu">Banda Djavú</string>
+    <string name="nome_album">Nome do Album</string>
+    <string name="detalhe_album">detalhe do album</string>
+    <string name="detalhe_name">Detalhe Album</string>
+</resources>
