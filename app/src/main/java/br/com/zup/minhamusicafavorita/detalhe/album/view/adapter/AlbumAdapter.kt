@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.detalhe.fotos.adapter
+package br.com.zup.minhamusicafavorita.detalhe.fotos.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

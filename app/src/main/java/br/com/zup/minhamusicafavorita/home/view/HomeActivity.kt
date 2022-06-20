@@ -7,7 +7,7 @@ import br.com.zup.minhamusicafavorita.databinding.ActivityMainBinding
 import br.com.zup.minhamusicafavorita.detalhe.DetalhesDaBandaActivity
 import br.com.zup.minhamusicafavorita.detalhe.adapter.DetalhePagerAdapter
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
