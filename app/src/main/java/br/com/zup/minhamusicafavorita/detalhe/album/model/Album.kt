@@ -4,10 +4,10 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class InformacaoAlbum(
+class Album(
     private var imagem: Int,
-    private var nomeAlbum: String,
-    private var detalhesDoAlbum: String,
+    private var nome: String,
+    private var detalhes: String,
     private var artista: String,
     private var lançamento: String,
     private var gravadora: String,
@@ -15,15 +15,15 @@ class InformacaoAlbum(
     private var formato: String,
     private var genero: String
 ) : Parcelable {
-    fun getImagemAlbum()= this.imagem
-    fun getNomeAlbum() = this.nomeAlbum
-    fun getNomeDetalheDoAlbum() = this.detalhesDoAlbum
-    fun getArtista() = this.artista
-    fun getLançamento() = this.lançamento
-    fun getGravadora() = this.gravadora
-    fun getEstudio() = this.estudio
-    fun getFormato() = this.formato
-    fun getGenero() = this.genero
+    fun getImagem()= imagem
+    fun getNome() = nome
+    fun getDetalhe() = detalhes
+    fun getArtista() = artista
+    fun getLançamento() = lançamento
+    fun getGravadora() = gravadora
+    fun getEstudio() = estudio
+    fun getFormato() = formato
+    fun getGenero() = genero
 
 
 }

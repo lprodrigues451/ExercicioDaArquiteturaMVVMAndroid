@@ -9,7 +9,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detalhe.detalheAlbum.DetalheAlbumActivity">
+    tools:context=".detalhe.album.detalheAlbum.view.DetalheAlbumActivity">
 
     <ImageView
         android:id="@+id/imagemAlbum"

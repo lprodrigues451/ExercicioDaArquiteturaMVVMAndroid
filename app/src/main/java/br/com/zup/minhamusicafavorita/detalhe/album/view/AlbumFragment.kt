@@ -6,17 +6,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.minhamusicafavorita.ALBUM_KEY
-import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
 import br.com.zup.minhamusicafavorita.detalhe.album.detalheAlbum.view.DetalheAlbumActivity
 import br.com.zup.minhamusicafavorita.detalhe.album.view.adapter.AlbumAdapter
-import br.com.zup.minhamusicafavorita.detalhe.album.model.InformacaoAlbum
+import br.com.zup.minhamusicafavorita.detalhe.album.model.Album
+import br.com.zup.minhamusicafavorita.detalhe.album.viewmodel.AlbumViewModel
 
-class FotosFragment : Fragment() {
-    private lateinit var binding : FragmentFotosBinding
-
+class AlbumFragment : Fragment() {
+    private lateinit var binding: FragmentFotosBinding
+    private val viewModel: AlbumViewModel by lazy {
+        ViewModelProvider(this)[AlbumViewModel::class.java]
+    }
     private val adapter: AlbumAdapter by lazy {
         AlbumAdapter(arrayListOf(), this::irParaDetalhe)
     }
@@ -31,92 +34,25 @@ class FotosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-      exibirRecyclerView()
-
+        exibirRecyclerView()
+        observables()
+        viewModel.getAllAlbum()
     }
 
     private fun exibirRecyclerView() {
-        adicionarItemListaAlbum()
         binding.rvAlbum.adapter = adapter
         binding.rvAlbum.layoutManager = GridLayoutManager(this.context, 2)
     }
 
-    private fun adicionarItemListaAlbum() {
-        val listaAlbum = mutableListOf<InformacaoAlbum>()
-        listaAlbum.add(InformacaoAlbum(
-                R.drawable.abum_djavu,
-                "O Furacão é show",
-                "Artista: Cd Banda Djavu E Dj Juninho Portugal - O Furacão É Show",
-                "Artista : Banda Djavú",
-                 "Lançamento : 2009",
-                "Gravadora: independente",
-                "Estúdio(s): Banda Djavu Stúdio",
-                "Formato(s): CD, download digital",
-                "Gêneros: Tecnobrega"
-            )
-        )
-        listaAlbum.add(InformacaoAlbum(
-            R.drawable.album_5anos,
-            "5 Anos de Sucesso",
-            "Cd Banda Djavu E Dj Juninho Portugal -  É Show5 Anos de Sucesso",
-            "Artista : Banda Djavú",
-            "Lançamento : 2013",
-            "Gravadora: independente",
-            "Estúdio(s): Banda Djavu Stúdio",
-            "Formato(s): CD, download digital",
-            "Gêneros: Tecnobrega"
-
-        )
-        )
-        listaAlbum.add(InformacaoAlbum(
-            R.drawable.a_volta_fenomeno,
-            "a volta do fenômeno",
-            "Cd Banda Djavu E Dj Juninho Portugal -  a volta do fenômeno",
-            "Artista : Banda Djavú",
-            "Lançamento : 2013",
-            "Gravadora: independente",
-            "Estúdio(s): Banda Djavu Stúdio",
-            "Formato(s): CD, download digital",
-            "Gêneros: Tecnobrega"
-
-        )
-        )
-
-        listaAlbum.add(InformacaoAlbum(
-            R.drawable.dez_anos,
-            "Banda Djavú 10 Anos",
-            "Cd Banda Djavu  -  10 anos de Djavú",
-            "Artista : Banda Djavú",
-            "Lançamento : 2019",
-            "Gravadora: independente",
-            "Estúdio(s): Banda Djavu Stúdio",
-            "Formato(s): CD, download digital",
-            "Gêneros: Tecnobrega"
-
-        )
-        )
-
-        listaAlbum.add(InformacaoAlbum(
-            R.drawable.pegada_do_piseiro,
-            "Na Pegada do Piseiro ",
-            "Cd Banda Djavu  - Na Pegada do Piseiro djavu",
-            "Artista : Banda Djavú",
-            "Lançamento : 2020",
-            "Gravadora: independente",
-            "Estúdio(s): Banda Djavu Stúdio",
-            "Formato(s): CD, download digital",
-            "Gêneros: Tecnobrega"
-
-        )
-        )
-
-
-        adapter.atualizarListaAlbum(listaAlbum)
+    private fun observables() {
+        viewModel.response.observe(viewLifecycleOwner) {
+            adapter.atualizarListaAlbum(it as MutableList<Album>)
+        }
     }
 
-    fun irParaDetalhe(album: InformacaoAlbum) {
+    private fun irParaDetalhe(album: Album) {
         val intent = Intent(context, DetalheAlbumActivity::class.java).apply {
-         putExtra(ALBUM_KEY, album)
+            putExtra(ALBUM_KEY, album)
         }
         startActivity(intent)
     }

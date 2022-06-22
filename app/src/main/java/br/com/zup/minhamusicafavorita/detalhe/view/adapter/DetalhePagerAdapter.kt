@@ -1,10 +1,10 @@
-package br.com.zup.minhamusicafavorita.detalhe.adapter
+package br.com.zup.minhamusicafavorita.detalhe.view.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import br.com.zup.minhamusicafavorita.detalhe.fotos.view.FotosFragment
+import br.com.zup.minhamusicafavorita.detalhe.album.view.AlbumFragment
 import br.com.zup.minhamusicafavorita.detalhe.informacao.view.InformacaoFragment
 
 class DetalhePagerAdapter(
@@ -19,7 +19,7 @@ class DetalhePagerAdapter(
     override fun createFragment(position: Int): Fragment {
             when(position){
                 0-> return InformacaoFragment()
-                1-> return FotosFragment()
+                1-> return AlbumFragment()
 
             }
         return InformacaoFragment()

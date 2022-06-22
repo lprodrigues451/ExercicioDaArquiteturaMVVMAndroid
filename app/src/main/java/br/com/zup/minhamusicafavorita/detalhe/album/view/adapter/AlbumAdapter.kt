@@ -1,14 +1,14 @@
-package br.com.zup.minhamusicafavorita.detalhe.fotos.view.adapter
+package br.com.zup.minhamusicafavorita.detalhe.album.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.minhamusicafavorita.databinding.MinhaMusicaItemBinding
-import br.com.zup.minhamusicafavorita.detalhe.fotos.model.InformacaoAlbum
+import br.com.zup.minhamusicafavorita.detalhe.album.model.Album
 
 class AlbumAdapter(
-    private var listaAlbum: MutableList<InformacaoAlbum>,
-    private val clickHeroi: (album: InformacaoAlbum) -> Unit
+    private var listaAlbum: MutableList<Album>,
+    private val clickHeroi: (album: Album) -> Unit
 
 ) : RecyclerView.Adapter<AlbumAdapter.ViewHolder>() {
 
@@ -24,10 +24,9 @@ class AlbumAdapter(
             clickHeroi(album)
         }
     }
-
     override fun getItemCount() = listaAlbum.size
 
-    fun atualizarListaAlbum(novaLista: MutableList<InformacaoAlbum>) {
+    fun atualizarListaAlbum(novaLista: MutableList<Album>) {
         if (listaAlbum.size == 0) {
             listaAlbum = novaLista
         } else {
@@ -37,8 +36,8 @@ class AlbumAdapter(
     }
 
     class ViewHolder(val binding: MinhaMusicaItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun adicionarInformacoesView(album: InformacaoAlbum) {
-            binding.ivAlbum.setImageResource(album.getImagemAlbum())
+        fun adicionarInformacoesView(album: Album) {
+            binding.ivAlbum.setImageResource(album.getImagem())
         }
     }
 }
